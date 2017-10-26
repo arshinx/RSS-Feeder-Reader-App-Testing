@@ -129,10 +129,20 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-        // Elements 
+        // Elements
         var feed = $('.feed');
         var previousContent;
         var nextContent;
+
+        // Loading Completes
+        beforeEach(function(done) {
+          loadFeed(1, function() {
+            // save previous content
+            previousContent = feed.find("h2").text();
+            // complete
+            done();
+        });
+
     });
 
 }()); // End of Main Function
