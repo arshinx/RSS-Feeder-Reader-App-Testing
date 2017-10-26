@@ -102,6 +102,11 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
+         // Finish Loading asynchonously
+         beforeEach(function(done) {
+           loadFeed(0, done);
+         });
+
      });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
