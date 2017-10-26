@@ -1,5 +1,8 @@
 # Feed Reader Testing — Test Driven Development (TDD)
 
+- Tests are defined at: `jasmine/spec/feedreader.js`
+- view `index.html` file within your browser to open application and testing results
+
 ## Background
 Using Jasmine (framework) to write a number of tests against a pre-existing application in order to test the underlying business logic of the application as well as the event handling and DOM manipulation.
 
