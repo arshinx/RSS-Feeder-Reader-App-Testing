@@ -129,7 +129,10 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-         
+        // Elements 
+        var feed = $('.feed');
+        var previousContent;
+        var nextContent;
     });
 
 }()); // End of Main Function
