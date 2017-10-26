@@ -119,10 +119,10 @@ $(function() {
            expect(elements.length).toBeGreaterThan(0);
           });
 
-     });
+     }); // end describe suite
 
     /* A new test suite named "New Feed Selection" */
-    describe("New Feed Selection", function(){
+    describe("New Feed Selection", function() {
 
         /* A test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
@@ -132,7 +132,7 @@ $(function() {
         // Elements
         var feed = $('.feed');
         var previousContent;
-        var nextContent;
+        var updatedContent;
 
         // Loading Completes
         beforeEach(function(done) {
@@ -141,8 +141,27 @@ $(function() {
             previousContent = feed.find("h2").text();
             // complete
             done();
+          });
         });
 
-    });
+        // If new feed is loaded by 'loadFeed' function, content changes
+        it("Content must change when a new feed loads!", function(done){
+
+          // Load
+          loadFeed(0, function() {
+
+            // Save new content for comparison
+            updatedContent = feed.find("h2").text();
+
+            // Compare
+            expect(updatedContent).not.toEqual(previousContent);
+
+            // Complete
+            done();
+
+          });
+        });
+
+      }); // "New Feed Selection" suite ends
 
 }()); // End of Main Function
