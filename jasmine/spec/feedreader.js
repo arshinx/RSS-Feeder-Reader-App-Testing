@@ -107,6 +107,18 @@ $(function() {
            loadFeed(0, done);
          });
 
+         /*
+            At least one '.entry' element is present
+            within the '.feed' container.
+         */
+         it ("There must be at least one '.entry' element!", function() {
+           // Get Elements
+           var elements = $('.feed .entry');
+
+           // More than one elements present
+           expect(elements.length).toBeGreaterThan(0);
+          });
+
      });
 
     /* TODO: Write a new test suite named "New Feed Selection" */
