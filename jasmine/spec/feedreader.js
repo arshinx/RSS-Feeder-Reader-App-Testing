@@ -47,6 +47,9 @@ $(function() {
            it('Name(s) must be defined!', function() {
              expect(allFeeds[i].url.length).toBeDefined();
            });
+           it('Name(s) must have at minimum one character!', function() {
+             expect(allFeeds[i].url.length).not.toBe(0);
+           });
          });
     });
 
