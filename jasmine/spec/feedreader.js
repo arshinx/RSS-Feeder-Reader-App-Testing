@@ -102,7 +102,7 @@ $(function() {
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
 
-         // Finish Loading asynchonously
+         // (loadFeed function is called) and (completes its work)
          beforeEach(function(done) {
            loadFeed(0, done);
          });
