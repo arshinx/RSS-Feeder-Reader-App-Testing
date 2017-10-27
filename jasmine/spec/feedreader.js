@@ -45,7 +45,7 @@ $(function() {
          */
          allFeeds.forEach(function(obj, i) {
            it('Name(s) must be defined!', function() {
-             expect(allFeeds[i].name.length).toBeDefined();
+             expect(allFeeds[i].name).toBeDefined();
            });
            it('Name(s) must have at minimum one character!', function() {
              expect(allFeeds[i].name.length).not.toBe(0);
